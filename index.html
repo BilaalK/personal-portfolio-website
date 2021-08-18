@@ -2,15 +2,60 @@
     <head>
         <title>BilaalK's Portfolio</title>
 
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     </head>
 
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navbar");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+        <div class="topnav" id="navbar">
+            <a href="#welcome-section" class="active">whoami</a>
+            <a href="#projects">ls Documents/Work</a>
+            <a href="#contact">ls Contact/</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
         <section id="welcome-section">
-            <h1>Hey I'm Bilaal Kunaefi (Tom)</h1>
-            <p>Your happy-go-lucky guy</p>
+            <img src="images/tompic.png" alt="picture of thomas" id="tompic">
+            <h1>Bilaal Kunaefi</h1>
+            <em>
+                <h2>Your happy-go-lucky guy</h2>
+                <p>Went for Software Engineering in Vocational High School,</p>
+                <p>Then Undergraduate for Information System in Telkom University.</p>
+            </em>
+        </section>
+
+        <section id="projects">
+            <br><br><br><br><h2>A brief look at one of my works</h2>
+            <main class="project-tile"></main>
+                <article class="card">
+                  <img src="images/project1.png" alt="work photo" id="workpic">
+                  <div class="text">
+                    <h3>Jamarindo.com</h3>
+                    <p>A company profile website created for PT Jaya Prima Mawardi</p>
+                    <a href="https://jamarindo.com" class="button" target="_blank">Visit website</a>
+                  </div>
+                </article>
+            </main>
+        </section>
+
+        <section id="contact">
+            <h1>Visit my social media</h1>
+            <a href="https://twitter.com/bkunaefi14" target="_blank" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+            <a href="https://github.com/BilaalK" id="profile-link" target="_blank" class="icon-button facebook"><i class="fab fa-github"></i><span></span></a>
+            <a href="https://steamcommunity.com/id/bkunaefi/" target="_blank" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
         </section>
     </body>
 </html>
